@@ -1,0 +1,215 @@
+/* --- RESET & MOBILE CONTAINER --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    background-color: #fdf2f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#game-app {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    max-width: 440px;
+    max-height: 900px;
+    background: #ffffff;
+    border: 3px solid #f472b6;
+    border-radius: 24px;
+    box-shadow: 0 15px 35px rgba(244, 114, 182, 0.25);
+    overflow: hidden;
+}
+
+#gameCanvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: #fff1f2;
+}
+
+/* --- HUD TOP BAR --- */
+#hud {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    right: 16px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.hud-card {
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid #f472b6;
+    padding: 6px 16px;
+    border-radius: 20px;
+    color: #db2777;
+    font-size: 0.9rem;
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(244, 114, 182, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* --- OVERLAYS --- */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.96);
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 24px;
+    text-align: center;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.game-title {
+    font-family: 'Sacramento', cursive;
+    font-size: 3.5rem;
+    color: #db2777;
+    line-height: 1;
+}
+
+.game-subtitle {
+    color: #f472b6;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 6px;
+}
+
+.menu-banner-card {
+    background: #fdf2f8;
+    border: 2px solid #fbcfe8;
+    border-radius: 16px;
+    padding: 16px;
+    color: #475569;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    max-width: 320px;
+}
+
+/* --- BUTTONS --- */
+.pink-btn {
+    background: #db2777;
+    color: #ffffff;
+    border: none;
+    border-radius: 25px;
+    padding: 14px 32px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(219, 39, 119, 0.3);
+    transition: transform 0.15s;
+}
+
+.pink-btn:active {
+    transform: scale(0.97);
+}
+
+/* --- ORDER PANEL --- */
+#order-panel {
+    position: absolute;
+    top: 75px;
+    left: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+    pointer-events: none;
+}
+
+#customer-bubble {
+    background: #ffffff;
+    border: 2px solid #db2777;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: #db2777;
+    font-weight: 700;
+    font-size: 0.88rem;
+    box-shadow: 0 4px 15px rgba(219, 39, 119, 0.2);
+    text-align: center;
+}
+
+/* --- KITCHEN ACTION BUTTONS --- */
+#kitchen-controls {
+    position: absolute;
+    bottom: 20px;
+    left: 16px;
+    right: 16px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    z-index: 10;
+}
+
+.cook-btn {
+    background: #ffffff;
+    border: 2px solid #f472b6;
+    border-radius: 18px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    color: #db2777;
+    font-weight: 700;
+    font-size: 0.85rem;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(244, 114, 182, 0.15);
+    transition: transform 0.1s, background 0.1s;
+}
+
+.cook-btn:active {
+    transform: scale(0.96);
+    background: #fdf2f8;
+}
+
+.dish-icon {
+    font-size: 1.6rem;
+}
+
+/* --- GAME OVER --- */
+.gameover-title {
+    color: #db2777;
+    font-size: 2.2rem;
+    font-weight: 800;
+}
+
+.stats-card {
+    background: #fdf2f8;
+    border: 2px solid #f472b6;
+    border-radius: 16px;
+    padding: 16px 24px;
+    text-align: center;
+    color: #475569;
+    font-size: 1rem;
+}
+
+.stats-card b {
+    color: #db2777;
+}

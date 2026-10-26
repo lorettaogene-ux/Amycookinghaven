@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Amy's Cooking Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Sacramento&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="game-app">
+        
+        <!-- CANVAS GAME SCREEN -->
+        <canvas id="gameCanvas"></canvas>
+
+        <!-- TOP HUD -->
+        <div id="hud">
+            <div class="hud-card">
+                <span class="hud-icon">💰</span>
+                <span id="money-display">₦0</span>
+            </div>
+            <div class="hud-card">
+                <span class="hud-icon">⭐</span>
+                <span id="score-display">0 Orders</span>
+            </div>
+        </div>
+
+        <!-- MAIN MENU OVERLAY -->
+        <div id="menu-overlay" class="overlay">
+            <div class="brand-box">
+                <h1 class="game-title">Amy's Cooking Hub</h1>
+                <p class="game-subtitle">African Doll Restaurant 🍲</p>
+            </div>
+
+            <div class="menu-banner-card">
+                <p class="menu-desc">Serve authentic Nigerian meals: Smoky Jollof, Fried Plantain, Spaghetti Stew & Peppered Goat Meat to doll customers!</p>
+            </div>
+
+            <button id="start-btn" class="pink-btn">OPEN RESTAURANT 👩🏾‍🍳</button>
+        </div>
+
+        <!-- ORDER TICKET PANEL -->
+        <div id="order-panel" class="hidden">
+            <div id="customer-bubble">
+                <span id="customer-request">Waiting for customer...</span>
+            </div>
+        </div>
+
+        <!-- KITCHEN ACTION CONTROLS -->
+        <div id="kitchen-controls">
+            <button id="cook-jollof" class="cook-btn">
+                <span class="dish-icon">🍚</span>
+                <span>Jollof Rice</span>
+            </button>
+            <button id="cook-plantain" class="cook-btn">
+                <span class="dish-icon">🍌</span>
+                <span>Dodo (Plantain)</span>
+            </button>
+            <button id="cook-spaghetti" class="cook-btn">
+                <span class="dish-icon">🍝</span>
+                <span>Spaghetti Stew</span>
+            </button>
+            <button id="cook-meat" class="cook-btn">
+                <span class="dish-icon">🐐</span>
+                <span>Goat Meat</span>
+            </button>
+        </div>
+
+        <!-- GAME OVER / REPORT OVERLAY -->
+        <div id="gameover-overlay" class="overlay hidden">
+            <h2 class="gameover-title">Shift Closed!</h2>
+            <div class="stats-card">
+                <p>Total Revenue: <b id="final-money">₦0</b></p>
+                <p>Successful Orders: <b id="final-orders">0</b></p>
+            </div>
+            <button id="restart-btn" class="pink-btn">OPEN AGAIN 🔄</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
